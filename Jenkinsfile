@@ -4,7 +4,7 @@ pipeline {
       
       stage('Checkout'){
             steps {
-                git 'https://github.com/Magothen/Maria_Jacoco_test.git'
+                git 'https://github.com/Magothen/Maria_test_Jacoco_own.git'
             }
         }
         stage('JUnit Build') {
