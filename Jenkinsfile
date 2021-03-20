@@ -9,7 +9,7 @@ pipeline {
         }
         stage('JUnit Build') {
             steps {
-                sh "mvn compile"
+                bat "mvn compile"
             }
         }
         stage('JUnit Test') {
@@ -27,7 +27,7 @@ pipeline {
         
         stage('newman') {
             steps {
-                sh 'newman run MT20_MARIA_SHISHKINA_Restful_Booker.postman_collection.json --environment MT20_MARIA_SHISHKINA_Restful_Booker.postman_environment.json --reporters junit'
+                bat 'newman run MT20_MARIA_SHISHKINA_Restful_Booker.postman_collection.json --environment MT20_MARIA_SHISHKINA_Restful_Booker.postman_environment.json --reporters junit'
             }
             post {
                 always {
